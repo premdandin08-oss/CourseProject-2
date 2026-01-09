@@ -31,7 +31,7 @@ def test_withdraw_insufficient_balance():
         "SB108888",
         "Savings",
         "3000",
-        "-5000"
+        "-6000"
     ]
     result = bank_details(args)
     assert result["updated_balance"] == 3000
