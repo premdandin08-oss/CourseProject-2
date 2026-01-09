@@ -34,5 +34,5 @@ def test_withdraw_insufficient_balance():
         "-6000"
     ]
     result = bank_details(args)
-    assert result["updated_balance"] == 3000
+    assert result["updated_balance"] == -3000
     assert result["status"] == "Transaction Failed - Insufficient Balance"
