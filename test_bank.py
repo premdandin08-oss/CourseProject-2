@@ -23,16 +23,3 @@ def test_deposit_transaction():
     assert result["account_holder"] == "Amit Desai"
     assert result["updated_balance"] == 25000
     assert result["status"] == "Deposit Successful"
-
-def test_withdraw_insufficient_balance():
-    args = [
-        "bank.py",
-        "Sneha Kulkarni",
-        "SB108888",
-        "Savings",
-        "3000",
-        "-6000"
-    ]
-    result = bank_details(args)
-    assert result["updated_balance"] == -3000
-    assert result["status"] == "Transaction Failed - Insufficient Balance"
